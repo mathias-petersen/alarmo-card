@@ -1,9 +1,10 @@
 node_modules
 package-lock.json
+yarn.lock
 README.html
 .DS_Store
 .vscode
 ._*
-
+.idea
 
 

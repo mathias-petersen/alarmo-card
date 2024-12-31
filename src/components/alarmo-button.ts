@@ -32,12 +32,11 @@ class AlarmoButton extends LitElement {
     return css`
       button {
         width: 100%;
-        border-width: calc(var(--content-scale, 1) * 1px);
-        border-color: var(--mdc-button-outline-color, rgba(0, 0, 0, 0.12));
-        color: var(--mdc-theme-primary, #6200ee);
-        border-radius: var(--mdc-shape-small, 4px);
+        border: none;
+        background-color: rgba(var(--rgb-primary-text-color), 0.05);
+        color: var(--primary-text-color);
+        border-radius: 12px;
         padding: calc(var(--content-scale, 1) * 0.875rem);
-        background-color: transparent;
         font-size: calc(var(--content-scale, 1) * 0.875rem);
         font-weight: var(--mdc-typography-button-font-weight, 500);
         letter-spacing: var(--mdc-typography-button-letter-spacing, 0.0892857em);
@@ -56,13 +55,13 @@ class AlarmoButton extends LitElement {
       }
       button:disabled {
         color: var(--disabled-text-color);
-        border: none;
+          background-color: transparent;
       }
       button:not(:disabled):hover {
-        background-color: rgba(var(--rgb-primary-color), 0.06);
+          background-color: rgba(var(--rgb-primary-text-color), 0.08);
       }
       button:not(:disabled):active {
-        background-color: rgba(var(--rgb-primary-color), 0.12);
+          background-color: rgba(var(--rgb-primary-text-color), 0.12);
       }
       button:focus {
         outline: none;

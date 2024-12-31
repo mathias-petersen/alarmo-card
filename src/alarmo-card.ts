@@ -312,7 +312,7 @@ export class AlarmoCard extends SubscribeMixin(LitElement) {
         ${!codeRequired(stateObj) && !this._config.keep_keypad_visible
           ? html``
           : html`
-              <ha-textfield
+              <div style="display: flex"><ha-textfield
                 .value=${this._input}
                 .label=${this.hass.localize('ui.card.alarm_control_panel.code')}
                 ?disabled=${!codeRequired(stateObj)}
@@ -325,7 +325,7 @@ export class AlarmoCard extends SubscribeMixin(LitElement) {
                 type="password"
                 id="code_input"
                 .inputmode=${this._alarmoConfig?.code_format === FORMAT_NUMBER ? 'numeric' : 'text'}
-              ></ha-textfield>
+              ></ha-textfield></div>
             `}
         ${(!codeRequired(stateObj) && !this._config.keep_keypad_visible) ||
         this._alarmoConfig?.code_format !== FORMAT_NUMBER
@@ -617,7 +617,6 @@ export class AlarmoCard extends SubscribeMixin(LitElement) {
         margin: 8px auto;
         max-width: 200px;
         text-align: center;
-        margin-left: calc(50% - 200px / 2);
       }
       ha-textfield.error {
         animation: shake 0.2s ease-in-out 0s 2;

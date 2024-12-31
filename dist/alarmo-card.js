@@ -553,7 +553,7 @@ var ze,Pe,Te,Me=function(e){return function(t){return"function"==typeof t?functi
         </div>
 
         ${Ht(i)||this._config.keep_keypad_visible?ce`
-              <ha-textfield
+              <div style="display: flex"><ha-textfield
                 .value=${this._input}
                 .label=${this.hass.localize("ui.card.alarm_control_panel.code")}
                 ?disabled=${!Ht(i)}
@@ -562,7 +562,7 @@ var ze,Pe,Te,Me=function(e){return function(t){return"function"==typeof t?functi
                 type="password"
                 id="code_input"
                 .inputmode=${(null===(e=this._alarmoConfig)||void 0===e?void 0:e.code_format)===Fe?"numeric":"text"}
-              ></ha-textfield>
+              ></ha-textfield></div>
             `:ce``}
         ${!Ht(i)&&!this._config.keep_keypad_visible||(null===(t=this._alarmoConfig)||void 0===t?void 0:t.code_format)!==Fe?ce``:ce`
               <div id="keypad" style="max-width: ${300*this._config.button_scale_keypad}px">
@@ -706,7 +706,6 @@ var ze,Pe,Te,Me=function(e){return function(t){return"function"==typeof t?functi
         margin: 8px auto;
         max-width: 200px;
         text-align: center;
-        margin-left: calc(50% - 200px / 2);
       }
       ha-textfield.error {
         animation: shake 0.2s ease-in-out 0s 2;

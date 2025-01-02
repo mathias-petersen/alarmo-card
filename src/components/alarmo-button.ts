@@ -10,17 +10,9 @@ class AlarmoButton extends LitElement {
 
   render() {
     return html`
-      ${this.scaled
-        ? html`
-            <button ?disabled=${this.disabled}>
-              <slot></slot>
-            </button>
-          `
-        : html`
-            <mwc-button ?disabled=${this.disabled} ?outlined=${!this.disabled}>
-              <slot></slot>
-            </mwc-button>
-          `}
+      <button ?disabled=${this.disabled}>
+        <slot></slot>
+      </button>
     `;
   }
 

@@ -125,7 +125,7 @@ Configuration using UI mode:
 
 ## Options
 | Name                    | Type    | Requirement  | Description                                                                                                    | Default            |
-| ----------------------- | ------- | ------------ | -------------------------------------------------------------------------------------------------------------- | ------------------ |
+|-------------------------| ------- | ------------ |----------------------------------------------------------------------------------------------------------------| ------------------ |
 | `type`                  | string  | **Required** | `custom:alarmo-card`                                                                                           |                    |
 | `entity`                | string  | **Required** | Alarm_control_panel entity                                                                                     |                    |
 | `name`                  | string  | Optional     | Displayed name (next to icon)                                                                                  | (Take from entity) |
@@ -134,6 +134,7 @@ Configuration using UI mode:
 | `button_scale_keypad`   | number  | Optional     | Scaling factor to apply to the size of the keypad buttons (between 1.0 and 2.5)                                | `1.0`              |
 | `use_clear_icon`        | boolean | Optional     | Show icon (instead of text) in keypad for clearing code input.<br>Only useful if numerical code is used.       | `false`            |
 | `show_messages`         | boolean | Optional     | Show diagnostic messages in the card when alarm is triggered or cannot be armed.                               | `true`             |
+| `show_name`             | boolean | Optional     | Show entity name.                                                                                              | `true`             |
 | `show_ready_indicator`  | boolean | Optional     | Adds ready/not ready indicators to the arm mode buttons.                                                       | `true`             |
 | `show_bypassed_sensors` | boolean | Optional     | Show a warning message when the alarm is armed with bypassed sensors.                                          | `true`             |
 | `states`                | object  | Optional     | Customize the display of states in the card.<br>See [state configuration](#state-configuration).               |                    |

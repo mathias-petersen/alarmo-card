@@ -2,7 +2,7 @@ import { CardConfig } from './types';
 
 export const CARD_VERSION = 'v1.5.2';
 
-export const BUTTONS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'clear'];
+export const BUTTONS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'disarm', '0', 'clear'];
 
 export const FORMAT_NUMBER = 'number';
 
@@ -74,6 +74,7 @@ export const defaultCardConfig: CardConfig = {
   button_scale_keypad: 1,
   states: {},
   show_messages: true,
+  show_name: true,
   show_ready_indicator: true,
   show_bypassed_sensors: true,
 };
